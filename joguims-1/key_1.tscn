@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://1otqwy4bo1nk"]
+
+[ext_resource type="PackedScene" uid="uid://bpayvv0i68ium" path="res://src/bundle_key/key1/key1.fbx" id="1_siql0"]
+[ext_resource type="Script" uid="uid://7f35bdqrt8iq" path="res://key_1.gd" id="2_bq551"]
+[ext_resource type="AudioStream" uid="uid://bf4bi5vmnvgd3" path="res://sounds/prmodrai-key-404884.mp3" id="3_cw40v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cw40v"]
+
+[node name="key1" unique_id=597888778 instance=ExtResource("1_siql0")]
+script = ExtResource("2_bq551")
+
+[node name="Area3D" type="Area3D" parent="." index="1" unique_id=1922096095]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=1862427272]
+shape = SubResource("BoxShape3D_cw40v")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="2" unique_id=163257346]
+stream = ExtResource("3_cw40v")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b74gu6348d4vd"
+path="res://.godot/imported/equip lanternqa.mp3-690861de9048a43d0016f1c06476c10e.mp3str"
+
+[deps]
+
+source_file="res://sounds/equip lanternqa.mp3"
+dest_files=["res://.godot/imported/equip lanternqa.mp3-690861de9048a43d0016f1c06476c10e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

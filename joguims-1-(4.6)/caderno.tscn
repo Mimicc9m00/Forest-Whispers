@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c1hvnknb1ufof"]
+
+[ext_resource type="PackedScene" uid="uid://cgllojwim0jlo" path="res://src/Meshes/SM_Book_001.fbx" id="1_bt6nc"]
+[ext_resource type="Script" uid="uid://bn0xw8rflc1xq" path="res://caderno.gd" id="2_6cvo4"]
+[ext_resource type="Texture2D" uid="uid://byrjk37c1c3qn" path="res://casas para decoracao/psx-abandoned-house/textures/Stone.jpg" id="3_6cvo4"]
+[ext_resource type="AudioStream" uid="uid://c7ee48nd3k2d3" path="res://sounds/livro.mp3" id="4_hde53"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hde53"]
+albedo_texture = ExtResource("3_6cvo4")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hde53"]
+
+[node name="caderno" unique_id=749776742 instance=ExtResource("1_bt6nc")]
+script = ExtResource("2_6cvo4")
+
+[node name="SM_Book_001" parent="." index="0" unique_id=150746004]
+material_override = SubResource("StandardMaterial3D_hde53")
+
+[node name="Area3D" type="Area3D" parent="." index="1" unique_id=688953474]
+transform = Transform3D(3.7654867, 0, 0, 0, 3.188642, 0, 0, 0, 3.6661289, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=2019023604]
+transform = Transform3D(3.7022758, 0, 0, 0, 1.7555194, 0, 0, 0, 4.3991246, 0, 0, 0)
+shape = SubResource("BoxShape3D_hde53")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="2" unique_id=1250231632]
+stream = ExtResource("4_hde53")

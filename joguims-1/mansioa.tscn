@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c6vdujrpsoqrv"]
+
+[ext_resource type="PackedScene" uid="uid://dmr65oixf5den" path="res://mansio/haunted_mansion_project_lafittes_tomb.glb" id="1_mjw1v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_emfmd"]
+size = Vector3(1, 2.3623047, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eok2c"]
+
+[node name="mansioa" unique_id=690227463 instance=ExtResource("1_mjw1v")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=861697007]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=2107236352]
+transform = Transform3D(105.46987, 0, 0, 0, 116.84604, 0, 0, 0, -166.02916, 0, 100.03099, 0)
+shape = SubResource("BoxShape3D_emfmd")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." index="2" unique_id=1517905093]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" index="0" unique_id=839540043]
+transform = Transform3D(136.87753, 0, 0, 0, 1, 0, 0, 0, 210.6476, 0, 9.528328, 0)
+shape = SubResource("BoxShape3D_eok2c")

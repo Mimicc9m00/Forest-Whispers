@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bdg2ccnwnjpuy"]
+
+[ext_resource type="Script" uid="uid://jdyafvre3l33" path="res://notree.gd" id="1_l064u"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_picae"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l064u"]
+
+[node name="notree" type="Node3D" unique_id=1427995005]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1254743546]
+mesh = SubResource("BoxMesh_picae")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1384821090]
+script = ExtResource("1_l064u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=744104377]
+shape = SubResource("BoxShape3D_l064u")

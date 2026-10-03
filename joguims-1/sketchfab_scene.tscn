@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://drsmkfocxkmkb"]
+
+[ext_resource type="PackedScene" uid="uid://cp7m3c07bkaix" path="res://materiais/electric_motor.glb" id="1_r57si"]
+[ext_resource type="Script" uid="uid://dba6yq2hjo7li" path="res://sketchfab_scene.gd" id="2_dhub7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2oyq3"]
+
+[node name="Sketchfab_Scene" unique_id=929184838 instance=ExtResource("1_r57si")]
+script = ExtResource("2_dhub7")
+
+[node name="Area3D" type="Area3D" parent="." index="1" unique_id=903218570]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=718514753]
+transform = Transform3D(2.6764793, 0, 0, 0, 1.8961347, 0, 0, 0, 3.17155, 0, 0, 0)
+shape = SubResource("BoxShape3D_2oyq3")

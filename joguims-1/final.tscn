@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://6nt77wnirsk8"]
+
+[ext_resource type="Script" uid="uid://d32isxgto716j" path="res://final.gd" id="1_h0aww"]
+[ext_resource type="AudioStream" uid="uid://can8bgn7qq2vb" path="res://sounds/carr on.mp3" id="2_tvybu"]
+
+[node name="final" type="Control" unique_id=436138168]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h0aww")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=86468493]
+layout_mode = 0
+offset_left = 2840.4653
+offset_top = -496.2605
+offset_right = 2880.4653
+offset_bottom = -456.2605
+scale = Vector2(-93.63931, 55.00429)
+color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="." unique_id=2109244020]
+wait_time = 1.3059999999999998
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=725849933]
+stream = ExtResource("2_tvybu")
+autoplay = true

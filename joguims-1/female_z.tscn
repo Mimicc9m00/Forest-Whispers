@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://tf176t1j1xs3"]
+
+[ext_resource type="PackedScene" uid="uid://dsv1knq1nt110" path="res://src/Free_Character/female_zombies/female_z.glb" id="1_gjbul"]
+[ext_resource type="Texture2D" uid="uid://bnospc5d75kjt" path="res://src/Free_Character/female_zombies/female_fz003.png" id="2_06153"]
+[ext_resource type="Script" uid="uid://cdo22cfi04wmi" path="res://female_z.gd" id="2_imypf"]
+[ext_resource type="Texture2D" uid="uid://dn8uhhy12eo43" path="res://src/Free_Character/female_zombies/female_fz001.png" id="3_imypf"]
+[ext_resource type="Texture2D" uid="uid://bxc7t17oyl358" path="res://src/Free_Character/female_zombies/female_fz002.png" id="4_cgblq"]
+[ext_resource type="AudioStream" uid="uid://l0oy8h2ojj1x" path="res://sounds/dream.mp3" id="5_06153"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nlpk8"]
+albedo_texture = ExtResource("2_06153")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_av6yj"]
+albedo_texture = ExtResource("3_imypf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h582v"]
+albedo_texture = ExtResource("4_cgblq")
+
+[node name="female_z" unique_id=987368764 instance=ExtResource("1_gjbul")]
+script = ExtResource("2_imypf")
+
+[node name="zf_head_01" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1323495414) index="0" unique_id=1817220476]
+material_override = SubResource("StandardMaterial3D_nlpk8")
+
+[node name="zf_head_02" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1323495414) index="1" unique_id=1057479077]
+material_override = SubResource("StandardMaterial3D_av6yj")
+
+[node name="zfemale" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1323495414) index="2" unique_id=630414039]
+material_override = SubResource("StandardMaterial3D_h582v")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="2" unique_id=77211127]
+stream = ExtResource("5_06153")

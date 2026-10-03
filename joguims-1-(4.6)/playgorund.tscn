@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dvrttp4ayqhs"]
+
+[ext_resource type="PackedScene" uid="uid://dtwoux47nm3cu" path="res://src/Playground/Playground.fbx" id="1_4ion3"]
+
+[node name="playgorund" unique_id=655402950 instance=ExtResource("1_4ion3")]

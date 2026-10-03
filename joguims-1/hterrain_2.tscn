@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bamqorolnu38w"]
+
+[ext_resource type="Script" uid="uid://dq7eqnbjwk04a" path="res://addons/zylann.hterrain/hterrain.gd" id="1_t1obu"]
+[ext_resource type="Resource" uid="uid://cv1eicxd3s1mw" path="res://datadiretori/data.hterrain" id="2_o5b2k"]
+[ext_resource type="Script" uid="uid://t6c8janpslxr" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_63xsd"]
+[ext_resource type="Texture2D" uid="uid://c1bo3idj4dgso" path="res://slot0_albedo_bump.png" id="4_cunli"]
+[ext_resource type="Texture2D" uid="uid://bjw28tvoqybxf" path="res://slot1_albedo_bump.png" id="5_7v51w"]
+[ext_resource type="Texture2D" uid="uid://dcshg8bd47nif" path="res://slot2_albedo_bump.png" id="6_d1p4o"]
+[ext_resource type="Texture2D" uid="uid://by2oyvk55kxbu" path="res://slot3_albedo_bump.png" id="7_fhbff"]
+[ext_resource type="Texture2D" uid="uid://cd8kq24yi6gg3" path="res://slot0_normal_roughness.png" id="8_osrbm"]
+[ext_resource type="Texture2D" uid="uid://du7jral7r8ynu" path="res://slot1_normal_roughness.png" id="9_baupq"]
+[ext_resource type="Texture2D" uid="uid://bnbhqcoktnk50" path="res://slot2_normal_roughness.png" id="10_ngmuk"]
+[ext_resource type="Texture2D" uid="uid://ck4irn5w2xdxk" path="res://slot3_normal_roughness.png" id="11_xey3b"]
+[ext_resource type="Script" uid="uid://dp5841iy65e76" path="res://florestgeneration.gd" id="12_o5b2k"]
+[ext_resource type="PackedScene" uid="uid://beoeist3ak7g1" path="res://aa.tscn" id="13_d1p4o"]
+[ext_resource type="PackedScene" uid="uid://bjs6l5fhg4hky" path="res://ab.tscn" id="14_fhbff"]
+[ext_resource type="PackedScene" uid="uid://b6fyxq3qoy0l0" path="res://ac.tscn" id="15_osrbm"]
+[ext_resource type="PackedScene" uid="uid://bjj3p714r0pj6" path="res://ad.tscn" id="16_baupq"]
+[ext_resource type="PackedScene" uid="uid://dtwoux47nm3cu" path="res://src/Playground/Playground.fbx" id="17_fhbff"]
+
+[sub_resource type="Resource" id="Resource_jig3c"]
+script = ExtResource("3_63xsd")
+mode = 0
+textures = [[ExtResource("4_cunli"), ExtResource("5_7v51w"), ExtResource("6_d1p4o"), ExtResource("7_fhbff")], [ExtResource("8_osrbm"), ExtResource("9_baupq"), ExtResource("10_ngmuk"), ExtResource("11_xey3b")]]
+
+[node name="hterrain2" type="Node3D" unique_id=34889767]
+
+[node name="HTerrain2" type="Node3D" parent="." unique_id=1869764854]
+script = ExtResource("1_t1obu")
+_terrain_data = ExtResource("2_o5b2k")
+chunk_size = 128
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_jig3c")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = null
+shader_params/u_tile_reduction = null
+metadata/_custom_type_script = "uid://dq7eqnbjwk04a"
+
+[node name="florestgeneration" type="Node3D" parent="." unique_id=1866244689]
+script = ExtResource("12_o5b2k")
+tree_scenes = Array[PackedScene]([ExtResource("13_d1p4o"), ExtResource("14_fhbff"), ExtResource("15_osrbm"), ExtResource("16_baupq")])
+
+[node name="Node3D" type="Node3D" parent="." unique_id=297083793]
+transform = Transform3D(3.2122884, 0, -3.2164395, 0, 4.5457983, 0, 3.2164395, 0, 3.2122884, 374.40353, -0.12621498, 156.60945)
+
+[node name="Playground" parent="Node3D" unique_id=655402950 instance=ExtResource("17_fhbff")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)

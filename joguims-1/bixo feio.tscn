@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://tmlm3jnuo336"]
+
+[ext_resource type="PackedScene" uid="uid://blqxjvcjihiw7" path="res://src/entity/CreepyDoll.glb" id="1_rtsrn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vowj6"]
+
+[node name="CreepyDoll2" unique_id=655489901 instance=ExtResource("1_rtsrn")]
+transform = Transform3D(-0.9733992, 0, -0.22911549, 0, 1, 0, 0.22911549, 0, -0.9733992, 0, 0, 0)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="2" unique_id=1496019485]
+
+[node name="Area3D" type="Area3D" parent="." index="3" unique_id=524031071]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=571975715]
+transform = Transform3D(1, 0, 0, 0, 2.097563, 0, 0, 0, 1.2271839, -1.1920929e-07, 0.4016173, -0.013898611)
+shape = SubResource("BoxShape3D_vowj6")

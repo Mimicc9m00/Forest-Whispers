@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://lrygo480s73r"]
+
+[ext_resource type="Script" uid="uid://daqv64i12mo73" path="res://transicao.gd" id="1_y7psn"]
+[ext_resource type="Texture2D" uid="uid://bckfugbdko5ar" path="res://versao2danome.png" id="3_6t3i2"]
+[ext_resource type="AudioStream" uid="uid://l0oy8h2ojj1x" path="res://sounds/dream.mp3" id="3_yymif"]
+
+[node name="Control" type="Control" unique_id=1498441298]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 3.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9949074, 1.0075355)
+size_flags_horizontal = 4
+script = ExtResource("1_y7psn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=737293581]
+layout_mode = 0
+offset_left = 2840.4653
+offset_top = -496.2605
+offset_right = 2880.4653
+offset_bottom = -456.2605
+scale = Vector2(-93.63931, 55.00429)
+color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="." unique_id=500459613]
+wait_time = 1.3059999999999998
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1362022978]
+stream = ExtResource("3_yymif")
+volume_db = -10.576
+autoplay = true
+
+[node name="Versao2Danome" type="Sprite2D" parent="." unique_id=1494719061]
+position = Vector2(894.5556, 496.26044)
+texture = ExtResource("3_6t3i2")

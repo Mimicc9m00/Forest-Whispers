@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bj2wqleq6muwk"]
+
+[ext_resource type="PackedScene" uid="uid://ct2xsxu7mnt2s" path="res://casas para decoracao/WoodHouse/WoodHouse.fbx" id="1_hk3lh"]
+[ext_resource type="Texture2D" uid="uid://cpmaui3350ae" path="res://casas para decoracao/WoodHouse/Diffuse.png" id="2_f0m00"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqwtn"]
+albedo_texture = ExtResource("2_f0m00")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hk3lh"]
+
+[node name="WoodHouse" unique_id=2103559248 instance=ExtResource("1_hk3lh")]
+
+[node name="WoodHouse" parent="." index="0" unique_id=1448705746]
+material_override = SubResource("StandardMaterial3D_pqwtn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=855171038]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1018383789]
+transform = Transform3D(3.2, 0, 0, 0, 4, 0, 0, 0, 3.4167607, 0, 2, 0)
+shape = SubResource("BoxShape3D_hk3lh")

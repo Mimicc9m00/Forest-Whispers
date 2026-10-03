@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://laoqqhcuqqj7"]
+
+[ext_resource type="Script" uid="uid://lcm8eifld7la" path="res://ciclo.gd" id="1_ha8xu"]
+
+[node name="ciclo" type="Node3D" unique_id=1084160684]
+script = ExtResource("1_ha8xu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1291994870]
+transform = Transform3D(-0.84804803, 0.114695534, -0.5173582, 0, 0.976296, 0.21643962, 0.5299193, 0.18355119, -0.82794595, 233.395, 5.99, 199)
+light_energy = 0.525
+light_indirect_energy = 0.175
+light_angular_distance = 5.0
+light_specular = 0.0
+light_bake_mode = 1
+directional_shadow_max_distance = 50.0

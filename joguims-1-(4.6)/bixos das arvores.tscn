@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dodq7jt6ndbbb"]
+
+[ext_resource type="Script" uid="uid://cp3o73buyywcl" path="res://bixos_das_arvores.gd" id="1_w4lhc"]
+[ext_resource type="PackedScene" uid="uid://tf176t1j1xs3" path="res://female_z.tscn" id="2_5mfgq"]
+[ext_resource type="AudioStream" uid="uid://chrk6fyujbsoa" path="res://sounds/jumpscare.mp3" id="3_5mfgq"]
+
+[node name="bixo das arvores" type="CharacterBody3D" unique_id=1342309968]
+script = ExtResource("1_w4lhc")
+
+[node name="female_z" parent="." unique_id=987368764 instance=ExtResource("2_5mfgq")]
+script = null
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=633967201]
+stream = ExtResource("3_5mfgq")
